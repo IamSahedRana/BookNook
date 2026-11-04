@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = { title: "Page Not Found" };
 
-/** A shelf with one book missing: "4 [gap] 4" */
 function MissingBookShelf() {
   const books = [
     "h-24 w-5 bg-neutral-500",
