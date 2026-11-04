@@ -40,18 +40,15 @@ function DetailsSkeleton() {
   );
 }
 
+export function BookDetails({ id }: { id: string }) {
+  const router = useRouter();
+  const { book, isLoading, error, refresh } = useBook(id);
+  const { borrows } = useMyBorrows();
+  const { data: session } = authClient.useSession();
+  const user = session?.user ?? null;
+  const [modalOpen, setModalOpen] = useState(false);
 
- if (!bookId) {
-    return (
-      <div className="mx-auto w-full max-w-[1320px] px-4 py-16 sm:px-8">
-        <EmptyState
-          icon="search_off"
-          title="Book not found"
-          description="This book doesn't exist or was removed by the reader who added it."
-          action={
-            <Button asChild><   /Button>
-              <Link href="/books">Back to All Books</Link>
-            </Button>
+  if (isLoading) {
     return (
       <div className="mx-auto w-full max-w-[1320px] px-4 py-8 sm:px-8">
         <DetailsSkeleton />
@@ -59,9 +56,9 @@ function DetailsSkeleton() {
     );
   }
 
-  if (fetching) {
+  if (error || !book) {
+    const notFound = error?.status === 404 || error?.status === 400;
     return (
-      <div className="mx-auto w-full max-w-[1320px] px-4 py-8 sm:px-8">     
       <div className="mx-auto w-full max-w-[1320px] px-4 py-16 sm:px-8">
         {notFound ? (
           <EmptyState
