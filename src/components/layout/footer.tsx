@@ -25,10 +25,13 @@ export function Footer() {
             <div className="mb-3">
               <Logo size="sm" textClassName="text-white" />
             </div>
-            
+            <p className="mb-5 text-sm leading-relaxed text-neutral-400">
+              A cozy little online library where you can add, borrow and return
+              books.
+            </p>
             <div className="flex items-center gap-2.5">
               {SOCIALS.map(({ label, href, Icon: SocialIcon }) => (
-                <a  
+                <a
                   key={label}
                   href={href}
                   target="_blank"
@@ -38,10 +41,14 @@ export function Footer() {
                 >
                   <SocialIcon size={16} />
                 </a>
-              ))} 
+              ))}
             </div>
           </div>
 
+          <div>
+            <h4 className="mb-3 text-sm font-bold text-white">Contact</h4>
+            <ul className="space-y-2.5 text-sm text-neutral-400">
+              <li className="flex items-center gap-2">
                 <Icon name="mail" size={16} className="text-neutral-500" />
                 <a
                   className="transition-colors hover:text-white"
@@ -74,19 +81,22 @@ export function Footer() {
             </ul>
           </div>
 
-              <div>
-                <h4 className="mb-3 text-sm font-bold text-white">Quick Links</h4>
-                <ul className="space-y-2.5 text-sm text-neutral-400">
-                  {NAV_LINKS.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        className="transition-colors hover:text-white"
-                        href={link.href}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-    
+          <div>
+            <h4 className="mb-3 text-sm font-bold text-white">Quick Links</h4>
+            <ul className="space-y-2.5 text-sm text-neutral-400">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    className="transition-colors hover:text-white"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
         <div className="pt-6 text-center text-xs text-neutral-500 sm:text-left">
           <p>
