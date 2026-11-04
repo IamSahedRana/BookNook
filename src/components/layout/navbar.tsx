@@ -56,3 +56,5 @@ export function Navbar() {
     </header>
   );
 }
+
+//Update the Navbar component to include a search bar that is always visible on mobile devices, but hidden on larger screens. The search bar should be placed between the logo and the navigation links.
