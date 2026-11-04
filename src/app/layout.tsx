@@ -11,7 +11,6 @@ const inter = Inter({
   display: "swap",
 });
 
-// Each page sets its own `title`, e.g. "All Books" -> "BookNook | All Books"
 export const metadata: Metadata = {
   title: {
     default: "BookNook | Home",
