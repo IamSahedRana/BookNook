@@ -19,12 +19,11 @@ import { BookCover } from "./book-cover";
 type BorrowModalProps = {
   book: Book;
   user: SessionUser;
-  open: boolean;
+  open: boolean;  
   onOpenChange: (open: boolean) => void;
-};
-
+};  
 /** Turns what the server said into the toasts from the design. */
-function toastForError(error: unknown) {
+function toastForError(error: unknown): "close" | "keep" {  
   const message = error instanceof Error ? error.message : "";
   const status = error instanceof ApiError ? error.status : 0;
 
@@ -32,7 +31,7 @@ function toastForError(error: unknown) {
     notify.error("Already borrowed this book", "Check your current loans in My Borrows.");
     return "close" as const;
   }
-  if (status === 409) {
+  if (status === 409 && /no copies/i.test(message)) {   
     notify.error("Book not available right now", "All copies are currently on loan. Please check back soon.");
     return "close" as const;
   }
@@ -40,7 +39,7 @@ function toastForError(error: unknown) {
     notify.error("Book not found", "This book may have been removed by its owner.");
     return "close" as const;
   }
-  if (status === 401) {
+if(status === 401) {  
     notify.error("Session expired", "Please log in again to borrow this book.");
     return "keep" as const;
   }
@@ -83,8 +82,9 @@ function ModalBody({ book, user, onOpenChange }: Omit<BorrowModalProps, "open">)
           </span>
           <DialogTitle>Borrow This Book</DialogTitle>
         </div>
-        <DialogDescription className="sr-only">
-          Confirm that you want to borrow {book.title} for {LOAN_DAYS} days.
+        <DialogDescription className="mt-1 text-sm text-muted-foreground">< /DialogDescription>
+          You&apos;re about to borrow <span className="font-semibold text-foreground">{book.title}</span> by{" "}
+          <span className="font-semibold text-foreground">{book.author}</span>. Please confirm the details below.
         </DialogDescription>
       </DialogHeader>
 
