@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" role="img" aria-label="A Brief Guide to the Stars by Dr. Anika Sultana">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+<rect width="300" height="400" fill="url(#g)"/>
+<rect x="18" y="18" width="264" height="364" rx="6" fill="none" stroke="#eff6ff" stroke-opacity=".45" stroke-width="2"/>
+<circle cx="150" cy="82" r="26" fill="#eff6ff" fill-opacity=".18"/><path d="M137 74h26v20h-26z" fill="#eff6ff" fill-opacity=".55"/>
+<text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#eff6ff">A Brief Guide</text><text x="150" y="208" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#eff6ff">to the Stars</text>
+<line x1="110" y1="250" x2="190" y2="250" stroke="#eff6ff" stroke-opacity=".6" stroke-width="2"/>
+<text x="150" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#eff6ff" fill-opacity=".92">Dr. Anika Sultana</text>
+</svg>
