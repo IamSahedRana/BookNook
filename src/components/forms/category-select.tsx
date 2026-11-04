@@ -7,8 +7,7 @@ import { CATEGORIES } from "@/lib/constants";
 type CategorySelectProps = {
   value: string;
   onChange: (value: string) => void;
-  id?: string;
-  disabled?: boolean;
+ 
 };
 
 export function CategorySelect({ value, onChange, id, disabled }: CategorySelectProps) {
@@ -21,12 +20,17 @@ export function CategorySelect({ value, onChange, id, disabled }: CategorySelect
         </span>
       </SelectTrigger>
       <SelectContent>
+       
+          </SelectItem>
         {CATEGORIES.map((category) => (
-          <SelectItem key={category} value={category}>
-            {category}
+          <SelectItem key={category.value} value={category.value}>
+            <span className="flex items-center gap-3">
+              <Icon name={category.icon} size={20} className="text-muted-foreground" />
+              {category.label}
+            </span>
           </SelectItem>
         ))}
       </SelectContent>
-    </Select>
+    </Select>   
   );
 }
