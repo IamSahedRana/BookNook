@@ -138,3 +138,31 @@
   background: var(--primary);
   opacity: 1;
 }
+
+/* ---------- 3D Floating Book Animation ---------- */
+@keyframes floatBook {
+  0%, 100% {
+    transform: translateY(0px) rotateY(var(--ry, 0deg));
+  }
+  50% {
+    transform: translateY(-8px) rotateY(var(--ry, 0deg));
+  }
+}
+
+.book-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: floatBook 6s ease-in-out infinite;
+}
+
+/* ---------- Fix Swiper Fade Overlaps ---------- */
+.hero-swiper .swiper-slide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.hero-swiper .swiper-slide-active {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
