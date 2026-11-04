@@ -54,6 +54,11 @@ const SLIDES: Slide[] = [
   },
 ];
 
+const TILTS = [
+  ["-rotate-6", "rotate-[5deg]"],
+  ["-rotate-[4deg]", "rotate-6"],
+  ["-rotate-[5deg]", "rotate-[4deg]"],
+];
 
 export function HeroSlider() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -134,7 +139,12 @@ export function HeroSlider() {
         >
           <Icon name="chevron_left" size={22} />
         </button>
-        
+        <button
+          type="button"
+          aria-label="Next slide"
+          onClick={() => swiper?.slideNext()}
+          className="absolute top-1/2 right-4 z-20 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-neutral-800 shadow-md transition-all hover:scale-105 hover:bg-white sm:flex"
+        >
           <Icon name="chevron_right" size={22} />
         </button>
       </div>
