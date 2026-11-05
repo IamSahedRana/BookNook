@@ -75,7 +75,7 @@ The goal of this project was to build a full-stack application while practicing 
 The home experience introduces users to the BookNook platform and helps them discover books from the available collection.
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/home.png" alt="BookNook Home Page" width="100%">
+  <img src="./src/preview/home.png" alt="BookNook Home Page" width="100%">
 </p>
 
 ### Features
@@ -91,7 +91,7 @@ The home experience introduces users to the BookNook platform and helps them dis
 The All Books section allows users to explore the complete book collection.
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/all-books.png" alt="All Books Page" width="100%">
+  <img src="./src/preview/all-books.png" alt="All Books Page" width="100%">
 </p>
 
 ### Features
@@ -112,7 +112,7 @@ The All Books section allows users to explore the complete book collection.
 Each book has an individual details page where users can explore its information and borrowing availability.
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/book-details.png" alt="Book Details Page" width="100%">
+  <img src="./src/preview/book-details.png" alt="Book Details Page" width="100%">
 </p>
 
 ### Features
@@ -129,7 +129,7 @@ Each book has an individual details page where users can explore its information
 Authenticated users can contribute to the library by adding new books.
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/add-book.png" alt="Add Book Page" width="100%">
+  <img src="./src/preview/add-book.png" alt="Add Book Page" width="100%">
 </p>
 
 ### Features
@@ -147,7 +147,7 @@ Authenticated users can contribute to the library by adding new books.
 The My Books section allows users to manage the books they have added.
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/my-books.png" alt="My Books Page" width="100%">
+  <img src="./src/preview/my-books.png" alt="My Books Page" width="100%">
 </p>
 
 ### Features
@@ -163,7 +163,7 @@ The My Books section allows users to manage the books they have added.
 Users can manage their borrowing activity from this section.
 
 <p align="center">
-  <img src="../booknook-client/public/images/pslides/my-borrows.png" alt="My Borrows Page" width="100%">
+  <img src="./src/preview/my-borrows.png" alt="My Borrows Page" width="100%">
 </p>
 
 ### Features
@@ -180,7 +180,7 @@ Users can manage their borrowing activity from this section.
 BookNook provides secure authentication using Better Auth and MongoDB.
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/authentication.png" alt="Authentication Page" width="100%">
+  <img src="./src/preview/authentication.png" alt="Authentication Page" width="100%">
 </p>
 
 ### Features
@@ -213,7 +213,7 @@ The profile section provides an overview of the user's library activity.
 # 🎨 Design Highlights
 
 <p align="center">
-  <img src="../booknook-client/public/images/slides/responsive-design.png" alt="BookNook Responsive Design" width="100%">
+  <img src="./src/preview/responsive-design.png" alt="BookNook Responsive Design" width="100%">
 </p>
 
 - Clean and modern library interface
